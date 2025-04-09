@@ -30,7 +30,7 @@ namespace StoryShelfApi.Impl.Queries
 
         public async Task<ApiResponse<BookResponse>> Handle(GetBookByIdQuery request, CancellationToken cancellationToken)
         {
-            var book = _context.Books.FirstOrDefaultAsync(x=>x.Id == request.id);
+            var book = await _context.Books.FirstOrDefaultAsync(x=>x.Id == request.id);
             var mapped = _mapper.Map<BookResponse>(book);
             return new ApiResponse<BookResponse>(mapped);
         }
