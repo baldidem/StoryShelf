@@ -22,7 +22,7 @@ namespace StoryShelfApi.Impl.Queries
         }
         public async Task<ApiResponse<List<BookResponse>>> Handle(GetAllBooksQuery request, CancellationToken cancellationToken)
         {
-            var books = await _context.Books.ToListAsync(cancellationToken);
+            var books = await _context.Books.Include(x=>x.Genre).ToListAsync(cancellationToken);
             var mapped = _mapper.Map<List<BookResponse>>(books);
 
             return new ApiResponse<List<BookResponse>>(mapped);
@@ -30,7 +30,7 @@ namespace StoryShelfApi.Impl.Queries
 
         public async Task<ApiResponse<BookResponse>> Handle(GetBookByIdQuery request, CancellationToken cancellationToken)
         {
-            var book = await _context.Books.FirstOrDefaultAsync(x=>x.Id == request.id);
+            var book = await _context.Books.Include(x=>x.Genre).FirstOrDefaultAsync(x=>x.Id == request.id);
             var mapped = _mapper.Map<BookResponse>(book);
             return new ApiResponse<BookResponse>(mapped);
         }

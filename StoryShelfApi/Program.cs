@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers()
     .AddFluentValidation(config =>
 {
-   config.RegisterValidatorsFromAssemblyContaining<BookValidator>();
+    config.RegisterValidatorsFromAssemblyContaining<BookValidator>();
 });
 
 builder.Services.AddEndpointsApiExplorer();
@@ -39,4 +39,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    DataGenerator.Initialize(services);
+}
 app.Run();

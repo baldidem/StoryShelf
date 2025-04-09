@@ -1,4 +1,6 @@
-﻿namespace StoryShelfApi.Models
+﻿using StoryShelfApi.Domain;
+
+namespace StoryShelfApi.Models
 {
     public class BookRequest
     {
@@ -13,6 +15,7 @@
         public int PageCount { get; set; }
         public DateTime PublishDate { get; set; }
         public int GenreId { get; set; }
+        public string Genre { get; set; }
     }
 
 

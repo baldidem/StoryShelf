@@ -9,7 +9,10 @@ namespace StoryShelfApi.Mapper
         public MapperConfig()
         {
             CreateMap<BookRequest, Book>();
-            CreateMap<Book, BookResponse>();
+            CreateMap<Book, BookResponse>().ForMember(dest=>dest.Genre, opt => opt.MapFrom(src=>src.Genre.Name));
+
+            CreateMap<GenreRequest, Genre>();
+            CreateMap<Genre, GenreResponse>();
 
             
         }

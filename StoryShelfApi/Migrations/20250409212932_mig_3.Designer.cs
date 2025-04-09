@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StoryShelfApi.Context;
 
@@ -11,9 +12,11 @@ using StoryShelfApi.Context;
 namespace StoryShelfApi.Migrations
 {
     [DbContext(typeof(StoryShelfDbContext))]
-    partial class StoryShelfDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250409212932_mig_3")]
+    partial class mig_3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
