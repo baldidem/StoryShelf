@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryShelfApi", "StoryShelfApi\StoryShelfApi.csproj", "{1791922F-99E8-4B6A-839B-8CE25C2E1039}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoryShelfApi", "StoryShelfApi\StoryShelfApi.csproj", "{1791922F-99E8-4B6A-839B-8CE25C2E1039}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryShelfBase", "StoryShelfBase\StoryShelfBase.csproj", "{A03B6D07-9A34-44FC-A41E-E8C8078F083A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoryShelfBase", "StoryShelfBase\StoryShelfBase.csproj", "{A03B6D07-9A34-44FC-A41E-E8C8078F083A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{66E79152-D1A1-47A4-B4A3-9B17B163DBE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A03B6D07-9A34-44FC-A41E-E8C8078F083A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A03B6D07-9A34-44FC-A41E-E8C8078F083A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A03B6D07-9A34-44FC-A41E-E8C8078F083A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E79152-D1A1-47A4-B4A3-9B17B163DBE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E79152-D1A1-47A4-B4A3-9B17B163DBE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E79152-D1A1-47A4-B4A3-9B17B163DBE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E79152-D1A1-47A4-B4A3-9B17B163DBE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

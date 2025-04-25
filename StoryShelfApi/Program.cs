@@ -24,6 +24,7 @@ builder.Services.AddMediatR(x => x.RegisterServicesFromAssemblies(typeof(CreateB
 
 
 builder.Services.AddDbContext<StoryShelfDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MSSQLServer")));
+builder.Services.AddScoped<IStoryShelfDbContext>(provider => provider.GetService<StoryShelfDbContext>());
 
 var app = builder.Build();
 
